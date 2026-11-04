@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ArtiAtlas: A Holistic Ecosystem for Diverse 3D Articulation Modeling | SIGGRAPH Asia 2026</title>
+  <meta name="description" content="Official project page for ArtiAtlas (SIGGRAPH Asia 2026): A 14,556-asset articulated 3D dataset across 173 categories, the ArtiPipe annotation pipeline, the ArtiBench benchmark, and the Artisan whole-mesh-to-URDF model." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Sticky Navigation -->
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">ArtiAtlas</span>
+        <span class="brand-venue">SIGGRAPH Asia 2026</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#video">Video</a>
+        <a href="#dataset">ArtiAtlas &amp; ArtiPipe</a>
+        <a href="#artibench">ArtiBench</a>
+        <a href="#artisan">Artisan</a>
+        <a href="#citation">BibTeX</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="venue-pill">
+          <span class="venue-badge">SIGGRAPH Asia 2026</span>
+          <span class="venue-sub">Conference Papers</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="accent-title">ArtiAtlas</span>: A Holistic Ecosystem for<br />
+          Diverse 3D Articulation Modeling
+        </h1>
+
+        <div class="authors-block">
+          <div class="authors-list">
+            <span class="author"><a href="https://moonbow721.github.io/" target="_blank" rel="noopener">Junzhe Lu</a><sup>1,2</sup></span>
+            <span class="author"><a href="https://jinglin7.github.io/" target="_blank" rel="noopener">Jing Lin</a><sup>2,3†</sup></span>
+            <span class="author"><a href="https://ziangcao0312.github.io/" target="_blank" rel="noopener">Ziang Cao</a><sup>3</sup></span>
+            <span class="author"><a href="https://www.sigs.tsinghua.edu.cn/whq_en/main.htm" target="_blank" rel="noopener">Haoqian Wang</a><sup>1*</sup></span>
+            <span class="author"><a href="https://liuziwei7.github.io/" target="_blank" rel="noopener">Ziwei Liu</a><sup>3</sup></span>
+            <span class="author"><a href="https://jfzhang95.github.io/" target="_blank" rel="noopener">Jianfeng Zhang</a><sup>2*</sup></span>
+          </div>
+          <div class="affiliations-list">
+            <span><sup>1</sup>Tsinghua University</span>
+            <span class="sep">·</span>
+            <span><sup>2</sup>ByteDance Seed</span>
+            <span class="sep">·</span>
+            <span><sup>3</sup>S-Lab, Nanyang Technological University</span>
+          </div>
+          <div class="author-notes">
+            <span><sup>†</sup>Project lead</span>
+            <span class="sep">·</span>
+            <span><sup>*</sup>Corresponding authors</span>
+          </div>
+        </div>
+
+        <!-- Resource Action Buttons -->
+        <div class="cta-row">
+          <a href="assets/paper/ArtiAtlas_SIGGRAPH_Asia_2026.pdf" target="_blank" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Paper (PDF)
+          </a>
+          <a href="assets/paper/ArtiAtlas_Supplementary.pdf" target="_blank" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            Supplementary
+          </a>
+          <a href="https://github.com/Seed3D/ArtiAtlas" target="_blank" rel="noopener" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            Code
+          </a>
+          <a href="https://huggingface.co/datasets/Moon-bow/ArtiAtlas" target="_blank" rel="noopener" class="btn btn-secondary">
+            <span>🤗</span> Dataset
+          </a>
+          <a href="https://drive.google.com/drive/folders/1Nzw9Bdl00Zybwxy3LPRm0IP12Z78VIFo" target="_blank" rel="noopener" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Benchmark Suites
+          </a>
+        </div>
+
+        <!-- Teaser Figure -->
+        <figure class="teaser-card">
+          <img src="assets/figures/teaser.jpeg" alt="ArtiAtlas Ecosystem Teaser" class="zoomable" />
+          <figcaption>
+            <strong>The ArtiAtlas Ecosystem.</strong>
+            <strong>(a) ArtiAtlas</strong> provides <strong>14,556</strong> human-verified articulated 3D assets across <strong>173</strong> categories, curated via our scalable pipeline <strong>ArtiPipe</strong>.
+            <strong>(b) ArtiBench</strong> establishes a standardized dual-suite evaluation protocol across the 200-sample <strong>Category-Rich Suite</strong> and 100-sample <strong>In-the-Wild Suite</strong>.
+            <strong>(c) Artisan</strong> transforms a static 3D mesh into a complete articulated URDF, outperforming existing methods across both suites.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Video & Abstract Section -->
+    <section id="video" class="section section-alt">
+      <div class="container narrow-container">
+        <div class="video-feature-card">
+          <video controls preload="metadata" playsinline loop muted autoplay class="featured-video">
+            <source src="assets/videos/fast_forward.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <div class="abstract-box">
+          <div class="section-eyebrow">Abstract</div>
+          <p class="abstract-text">
+            The creation of interactable, articulated 3D assets is a cornerstone of modern computer graphics and physical simulation. Progress in articulation modeling is currently bottlenecked by limited data scale, inconsistent evaluation protocols, and representational fragility under long-tail kinematic chains. We present three complementary contributions to address these gaps: <em>ArtiAtlas</em> is a large-scale dataset of 14,556 annotated articulated objects across 173 categories, constructed via a scalable human-machine pipeline for semantic-part consolidation and kinematic annotation. <em>ArtiBench</em> is a unified evaluation suite pairing an in-distribution split of ArtiAtlas with an image-conditioned in-the-wild set, and introducing calibrated VLM-based metrics that align closely with human preference where ground-truth 3D annotation is unavailable. <em>Artisan</em> is a part-aware articulation model with a set-prediction query interface, mask-aware bidirectional decoding, and geometry-anchored axis supervision, trained end-to-end to predict variable-cardinality link sets directly from raw meshes. Under a strict per-joint success criterion, all evaluated baselines achieve below 10% on ArtiAtlas; Artisan raises this to 30% and clearly leads on the in-the-wild VLM scores, yet no method—ours included—is close to reliable fine-grained kinematic prediction. We release the 10,005-object public subset of ArtiAtlas, ArtiBench, and Artisan as a shared foundation for future work on realistic articulation understanding and generation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pillar I: ArtiAtlas & ArtiPipe -->
+    <section id="dataset" class="section">
+      <div class="container">
+        <div class="section-header center-header">
+          <div class="section-eyebrow">Data &amp; Curation Pipeline</div>
+          <h2 class="section-heading">ArtiAtlas &amp; ArtiPipe</h2>
+          <p class="section-lead">
+            Covering <strong>173 categories</strong>, <strong>4 joint types</strong>, and kinematic chains up to <strong>depth 10</strong><span class="nowrap">—annotated with ArtiPipe.</span>
+          </p>
+        </div>
+
+        <!-- 10 Studio-Rendered Looping Video Cards -->
+        <div class="studio-gallery">
+          <div class="gallery-item">
+            <div class="gallery-video-wrap">
+              <video autoplay loop muted playsinline preload="metadata" src="assets/gallery/03093.mp4"></video>
+              <span class="oid-badge">#03093</span>
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-title-row">
+                <h4>Drill Press</h4>
+                <span class="depth-pill">9 Links · 8 Joints</span>
+              </div>
+              <div class="joint-badges">
+                <span class="jbadge j-pris">Prismatic ×4</span>
+                <span class="jbadge j-rev">Revolute ×2</span>
+                <span class="jbadge j-cont">Continuous ×2</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-video-wrap">
+              <video autoplay loop muted playsinline preload="metadata" src="assets/gallery/09875.mp4"></video>
+              <span class="oid-badge">#09875</span>
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-title-row">
+                <h4>Quadruped Robot w/ Arm</h4>
+                <span class="depth-pill">13 Links · 12 Joints</span>
+              </div>
+              <div class="joint-badges">
+                <span class="jbadge j-rev">Revolute ×12</span>
+                <span class="jbadge j-tree">Legs + 4-DoF Arm</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-video-wrap">
+              <video autoplay loop muted playsinline preload="metadata" src="assets/gallery/12650.mp4"></video>
+              <span class="oid-badge">#12650</span>
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-title-row">
+                <h4>Bench Vise</h4>
+                <span class="depth-pill">4 Links · 3 Joints</span>
+              </div>
+              <div class="joint-badges">
+                <span class="jbadge j-screw">Screw ×2</span>
+                <span class="jbadge j-pris">Prismatic ×1</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-video-wrap">
+              <video autoplay loop muted playsinline preload="metadata" src="assets/gallery/00002.mp4"></video>
+              <span class="oid-badge">#00002</span>
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-title-row">
+                <h4>3D Printer</h4>
+                <span class="depth-pill">5 Links · 4 Joints</span>
+              </div>
+              <div class="joint-badges">
+                <span class="jbadge j-pris">Prismatic ×2</span>
+                <span class="jbadge j-rev">Revolute ×1</span>
+                <span class="jbadge j-cont">Continuous ×1</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-video-wrap">
+              <video autoplay loop muted playsinline preload="metadata" src="assets/gallery/00009.mp4"></video>
+              <span class="oid-badge">#00009</span>
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-title-row">
+                <h4>Ventilation Fan</h4>
+                <span class="depth-pill">6 Links · 5 Joints</span>
+              </div>
+              <div class="joint-badges">
+                <span class="jbadge j-rev">Revolute ×4</span>
+                <span class="jbadge j-cont">Continuous ×1</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-video-wrap">
+              <video autoplay loop muted playsinline preload="metadata" src="assets/gallery/13262.mp4"></video>
+              <span class="oid-badge">#13262</span>
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-title-row">
+                <h4>Moka Espresso Pot</h4>
+                <span class="depth-pill">3 Links · 2 Joints</span>
+              </div>
+              <div class="joint-badges">
+                <span class="jbadge j-screw">Screw ×1</span>
+                <span class="jbadge j-rev">Revolute ×1</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-video-wrap">
+              <video autoplay loop muted playsinline preload="metadata" src="assets/gallery/02427.mp4"></video>
+              <span class="oid-badge">#02427</span>
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-title-row">
+                <h4>Folding Screen</h4>
+                <span class="depth-pill">4 Links · 3 Joints</span>
+              </div>
+              <div class="joint-badges">
+                <span class="jbadge j-rev">Revolute ×3</span>
+                <span class="jbadge j-tree">Serial Chain</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-video-wrap">
+              <video autoplay loop muted playsinline preload="metadata" src="assets/gallery/13591.mp4"></video>
+              <span class="oid-badge">#13591</span>
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-title-row">
+                <h4>Terrestrial Globe</h4>
+                <span class="depth-pill">3 Links · 2 Joints</span>
+              </div>
+              <div class="joint-badges">
+                <span class="jbadge j-cont">Continuous ×2</span>
+                <span class="jbadge j-tree">Gimbal Ring</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-video-wrap">
+              <video autoplay loop muted playsinline preload="metadata" src="assets/gallery/03826.mp4"></video>
+              <span class="oid-badge">#03826</span>
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-title-row">
+                <h4>Microwave Oven</h4>
+                <span class="depth-pill">2 Links · 1 Joint</span>
+              </div>
+              <div class="joint-badges">
+                <span class="jbadge j-rev">Revolute Door</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="gallery-video-wrap">
+              <video autoplay loop muted playsinline preload="metadata" src="assets/gallery/00518.mp4"></video>
+              <span class="oid-badge">#00518</span>
+            </div>
+            <div class="gallery-info">
+              <div class="gallery-title-row">
+                <h4>Swivel-Handle Bucket</h4>
+                <span class="depth-pill">2 Links · 1 Joint</span>
+              </div>
+              <div class="joint-badges">
+                <span class="jbadge j-rev">Revolute Bail</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ArtiPipe Pipeline Figure -->
+        <figure class="figure-box">
+          <img src="assets/figures/artipipe.png" alt="ArtiPipe Annotation Pipeline" class="zoomable" />
+          <figcaption>
+            <strong>ArtiPipe Human-in-the-Loop Curation Pipeline.</strong> Part-aware multi-view VLM prompting infers the kinematic hierarchy, geometric contact prototypes propose candidate joint axes, and differentiable rendering optimizes motion ranges against generated articulated states before expert human review.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Pillar II: ArtiBench -->
+    <section id="artibench" class="section section-alt">
+      <div class="container">
+        <div class="section-header center-header">
+          <div class="section-eyebrow">Standardized Evaluation Benchmark</div>
+          <h2 class="section-heading">ArtiBench</h2>
+          <p class="section-lead">
+            A unified benchmark across the <strong>Category-Rich Suite</strong> (200 objects across 136 categories with 3D ground truth) and the <strong>In-the-Wild Suite</strong> (100 real-world photographs across 50 categories), evaluating <strong>Object Geometry</strong>, <strong>Part Decomposition</strong>, and <strong>Articulation</strong>.
+          </p>
+        </div>
+
+        <figure class="figure-box">
+          <img src="assets/figures/Artibench.jpg" alt="ArtiBench Suites and Evaluation Protocol" class="zoomable" />
+          <figcaption>
+            <strong>ArtiBench Overview.</strong>
+            <strong>Left:</strong> The 200-sample <em>Category-Rich Suite</em> and 100-sample <em>In-the-Wild Suite</em> span diverse everyday, industrial, and mechanical categories.
+            <strong>Right:</strong> Every prediction is scored across three complementary dimensions—<em>Object Geometry</em>, <em>Part Decomposition</em>, and <em>Articulation</em>—combining 3D geometric accuracy, SDF self-collision checks, multi-modal alignment, and a calibrated few-shot VLM judge.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Pillar III: Artisan Model & Visual Results -->
+    <section id="artisan" class="section">
+      <div class="container">
+        <div class="section-header center-header">
+          <div class="section-eyebrow">Feed-Forward Whole-Mesh Articulation</div>
+          <h2 class="section-heading">Artisan</h2>
+          <p class="section-lead">
+            Given a single static 3D mesh, <strong>Artisan</strong> jointly predicts part segmentation masks, kinematic tree topology, joint types, canonical joint axes, and motion limits in a single feed-forward pass.
+          </p>
+        </div>
+
+        <figure class="figure-box">
+          <img src="assets/figures/artisan_pipeline.png" alt="Artisan pipeline: point cloud encoder, decoder backbone, and decoder heads" class="zoomable" />
+          <figcaption>
+            <strong>Artisan Pipeline.</strong> A frozen PartField encoder fuses structural features with point tokens. Alternating point–query attention refines part masks, while kinematic heads predict part presence, parent relations, joint types, axes, and motion ranges.
+          </figcaption>
+        </figure>
+
+        <!-- Clean Visual Showcase Tabs -->
+        <div class="results-tabs-wrap">
+          <div class="tab-buttons" data-tab-group="qual-tabs">
+            <button class="tab-btn active" data-target="qual-15">Diverse Category Showcase (15 Objects)</button>
+            <button class="tab-btn" data-target="qual-cat">Category-Rich Suite Comparison</button>
+            <button class="tab-btn" data-target="qual-itw">In-the-Wild Suite Comparison</button>
+          </div>
+
+          <div class="tab-panels" id="qual-tabs">
+            <div class="tab-panel active" id="qual-15">
+              <img src="assets/figures/artisan_only_15samples.png" alt="Artisan predictions across 15 diverse categories" class="zoomable" />
+              <p class="fig-caption">
+                <strong>Generalization across 15 diverse categories:</strong> eyeglasses, power drill, wheeled trash can, briefcase, stapler, microscope, wardrobe, C-clamp, faucet, suitcase, record player, upright piano, spiral notebook, step ladder, and dump truck.
+              </p>
+            </div>
+            <div class="tab-panel" id="qual-cat">
+              <img src="assets/figures/category_rich_qualitative.png" alt="Qualitative comparison on Category-Rich Suite" class="zoomable" />
+              <p class="fig-caption">
+                <strong>Qualitative comparison on the Category-Rich Suite.</strong> Both <strong>ArtiPipe</strong> and <strong>Artisan</strong> produce cleaner part boundaries and more accurate joint axes than existing baselines across diverse non-furniture categories.
+              </p>
+            </div>
+            <div class="tab-panel" id="qual-itw">
+              <img src="assets/figures/itw_qualitative.png" alt="Qualitative comparison on In-the-Wild Suite" class="zoomable" />
+              <p class="fig-caption">
+                <strong>Qualitative comparison on the In-the-Wild Suite.</strong> Compared against 7 baseline methods on real-world photographs, <strong>Artisan</strong> decomposes movable parts cleanly and predicts physically plausible hinge axes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BibTeX Citation -->
+    <section id="citation" class="section section-alt">
+      <div class="container narrow-container">
+        <div class="section-header center-header">
+          <div class="section-eyebrow">Citation</div>
+          <h2 class="section-heading">BibTeX</h2>
+        </div>
+
+        <div class="bibtex-card">
+          <button class="copy-btn" id="copy-bibtex-btn" aria-label="Copy BibTeX">
+            <span id="copy-btn-text">Copy BibTeX</span>
+          </button>
+          <pre><code id="bibtex-code">@inproceedings{lu2026artiatlas,
+  title     = {ArtiAtlas: A Holistic Ecosystem for Diverse 3D Articulation Modeling},
+  author    = {Lu, Junzhe and Lin, Jing and Cao, Ziang and Wang, Haoqian and Liu, Ziwei and Zhang, Jianfeng},
+  booktitle = {SIGGRAPH Asia 2026 Conference Papers (SA Conference Papers '26)},
+  year      = {2026},
+  doi       = {10.1145/3829340.3842377}
+}</code></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        <strong>ArtiAtlas</strong> · Tsinghua University, ByteDance Seed &amp; S-Lab, Nanyang Technological University · SIGGRAPH Asia 2026
+      </p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Zoomable Figures -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close preview">&times;</button>
+    <img src="" alt="" id="lightbox-img" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
